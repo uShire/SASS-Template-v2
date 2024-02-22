@@ -1,0 +1,21 @@
+@use "./typography" as *;
+@use "../abstract/colors" as *;
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 7rem;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: $ff-primary;
+  line-height: 1.4;
+  color: $clr-dark;
+}
+
+.container {
+  max-width: 120rem;
+  padding: 1.5rem;
+  margin: 0 auto;
+  width: 100%;
+}
