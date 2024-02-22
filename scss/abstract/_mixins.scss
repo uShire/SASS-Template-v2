@@ -1,0 +1,6 @@
+@use "../base/" as *;
+@mixin mediaQuery($width) {
+  @media screen and (min-width: $width) {
+    @content;
+  }
+}
