@@ -1,4 +1,43 @@
 @use "../abstract/" as *;
-h1 {
-  color: $clr-primary;
+@use "../components/" as *;
+@use "../base/" as *;
+
+.banner {
+  background-image: url("/img/banner-img.png");
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  h1 {
+    color: $clr-light;
+    font-weight: 400;
+    font-size: clamp(3rem, 10vw, 8rem);
+    max-width: 80rem;
+    margin: 0 auto;
+    text-align: center;
+  }
+  &__btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 5rem;
+    a {
+      width: 70%;
+    }
+  }
+  @include mediaQuery($break-lg) {
+    &__btn {
+      display: flex;
+      flex-direction: row;
+      a {
+        width: 25rem;
+      }
+    }
+  }
 }
