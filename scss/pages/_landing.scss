@@ -5,7 +5,7 @@
 .banner {
   background-image: url("/img/banner-img.png");
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -46,14 +46,14 @@
 .offers {
   background: $clr-dark;
   width: 100%;
-  padding: 15rem 0;
+  padding: 5rem 0;
   position: relative;
   h2 {
     color: $clr-light;
     font-weight: 100;
     letter-spacing: 10px;
     text-align: center;
-    font-size: clamp(2rem, 6vw, 5rem);
+    font-size: clamp(4rem, 6vw, 7rem);
   }
   &__wrapper {
     display: flex;
@@ -145,6 +145,89 @@
         padding: 2.5rem;
         margin-left: 2.5rem;
         margin-right: 2.5rem;
+      }
+    }
+  }
+}
+
+.prjcts {
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  &__item {
+    min-height: 700px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    &#pr-1 {
+      background-image: url("/img/projects1.png");
+      background-size: cover;
+      background-position: center center;
+      width: 100%;
+    }
+    &#pr-2 {
+      background-image: url("/img/projects2.png");
+      background-size: cover;
+      background-position: center center;
+      width: 100%;
+    }
+    &#pr-3 {
+      background-image: url("/img/projects3.png");
+      background-size: cover;
+      background-position: center center;
+      width: 100%;
+    }
+    &__text {
+      background: rgba(0, 0, 0, 0.5);
+      max-width: 40rem;
+      padding: 1.5rem;
+      h3 {
+        color: $clr-light;
+        font-size: 2.5rem;
+      }
+      p {
+        text-align: justify;
+        color: $clr-light;
+        margin-top: 2rem;
+        margin-bottom: 3rem;
+        max-width: 40rem;
+      }
+    }
+    .dark-overlay {
+      position: absolute;
+      width: 0;
+      height: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      display: block;
+      transition: 0.5s ease;
+    }
+  }
+  @include mediaQuery($break-lg) {
+    &__wrapper {
+      display: flex;
+    }
+    &__item {
+      .dark-overlay {
+        width: 100%;
+        height: 100%;
+      }
+
+      &__text {
+        display: none;
+      }
+      &:hover {
+        .dark-overlay {
+          width: 0;
+          height: 0;
+          transition: 0.5s ease;
+        }
+        .prjcts__item__text {
+          display: unset;
+        }
       }
     }
   }

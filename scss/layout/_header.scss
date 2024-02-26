@@ -8,6 +8,9 @@
   width: 100%;
   transition: 0.5s ease;
   z-index: 999;
+  &.open {
+    background: $clr-dark;
+  }
   &__wrapper {
     display: flex;
     align-items: center;
@@ -124,6 +127,7 @@
   }
 
   @include mediaQuery($break-lg) {
+    background: $clr-transparent;
     &.open {
       .header__wrapper {
         margin-top: 10rem;
@@ -131,6 +135,7 @@
         border-radius: 5rem;
         transition: 0.5s ease;
         padding: 1.5rem;
+        border: 1px solid $clr-light;
       }
     }
     &__wrapper {
