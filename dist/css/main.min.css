@@ -241,6 +241,31 @@ ul {
   color: gray;
 }
 
+.backTotop {
+  position: absolute;
+  z-index: 998;
+  bottom: 5rem;
+  right: 1rem;
+  position: fixed;
+  display: none;
+}
+.backTotop a {
+  padding: 1rem 1.5rem;
+  border: 1px solid #ffffff;
+  border-radius: 5rem;
+  font-size: 2rem;
+  background: #fb4d3d;
+  color: #ffffff;
+}
+.backTotop.open {
+  display: block;
+}
+@media screen and (min-width: 960px) {
+  .backTotop {
+    right: 5rem;
+  }
+}
+
 .banner {
   background-image: url("/img/banner-img.png");
   height: 100vh;

@@ -6,11 +6,14 @@ burgir.addEventListener("click", () => {
 });
 
 const header = document.querySelector(".header");
+const backTop = document.querySelector(".backTotop");
 window.console.log;
 window.addEventListener("scroll", () => {
   if (window.scrollY >= 100) {
     header.classList.add("open");
+    backTop.classList.add("open");
   } else {
     header.classList.remove("open");
+    backTop.classList.remove("open");
   }
 });

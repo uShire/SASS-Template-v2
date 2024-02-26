@@ -2,6 +2,29 @@
 @use "../components/" as *;
 @use "../base/" as *;
 
+.backTotop {
+  position: absolute;
+  z-index: 998;
+  bottom: 5rem;
+  right: 1rem;
+  position: fixed;
+  display: none;
+  a {
+    padding: 1rem 1.5rem;
+    border: 1px solid $clr-light;
+    border-radius: 5rem;
+    font-size: 2rem;
+    background: $clr-primary;
+    color: $clr-light;
+  }
+  &.open {
+    display: block;
+  }
+  @include mediaQuery($break-lg) {
+    right: 5rem;
+  }
+}
+
 .banner {
   background-image: url("/img/banner-img.png");
   height: 100vh;
