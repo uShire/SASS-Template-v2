@@ -258,7 +258,7 @@ ul {
   color: #ffffff;
 }
 .backTotop.open {
-  display: block;
+  display: unset;
 }
 @media screen and (min-width: 960px) {
   .backTotop {
