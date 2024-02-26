@@ -129,6 +129,7 @@
   @include mediaQuery($break-lg) {
     background: $clr-transparent;
     &.open {
+      background: $clr-transparent;
       .header__wrapper {
         margin-top: 10rem;
         background: $clr-dark;

@@ -1,0 +1,32 @@
+@use "../abstract/" as *;
+@use "../components/" as *;
+@use "../base/" as *;
+
+.footer {
+  padding-top: 6rem;
+  padding-bottom: 5rem;
+  background: $clr-dark;
+  z-index: 11;
+  position: relative;
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__icons {
+    ul {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      li {
+        a {
+          font-size: 3rem;
+          color: gray;
+        }
+      }
+    }
+  }
+  p {
+    color: gray;
+  }
+}
