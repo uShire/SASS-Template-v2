@@ -20,6 +20,16 @@ body {
   margin: 0 auto;
   width: 100%;
 }
+.bot-blur {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.top-blur {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
 
 $break-sm: 480px;
 $break-md: 768px;

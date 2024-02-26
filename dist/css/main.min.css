@@ -19,6 +19,18 @@ body {
   width: 100%;
 }
 
+.bot-blur {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.top-blur {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -59,6 +71,7 @@ ul {
   position: fixed;
   width: 100%;
   transition: 0.5s ease;
+  z-index: 999;
 }
 .header__wrapper {
   display: flex;
@@ -203,6 +216,7 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 .banner h1 {
   color: #ffffff;
@@ -230,5 +244,108 @@ ul {
   }
   .banner__btn a {
     width: 25rem;
+  }
+}
+
+.offers {
+  background: #2b2b2b;
+  width: 100%;
+  padding: 15rem 0;
+  position: relative;
+}
+.offers h2 {
+  color: #ffffff;
+  font-weight: 100;
+  letter-spacing: 10px;
+  text-align: center;
+  font-size: clamp(2rem, 6vw, 5rem);
+}
+.offers__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+.offers__item {
+  background: #ffffff;
+  border-radius: 1rem;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  transition: 0.5s ease;
+}
+.offers__item__title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+}
+.offers__item__title i {
+  color: #fb4d3d;
+  font-size: 4rem;
+}
+.offers__item__title h3 {
+  color: #2b2b2b;
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+.offers__item p {
+  text-align: justify;
+  margin-top: 3rem;
+}
+.offers__item a {
+  margin-top: 5rem;
+  text-align: center;
+  color: #fb4d3d;
+  border-top: 1px solid #fb4d3d;
+  padding: 1rem 0;
+  font-size: 2rem;
+  font-weight: 300;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+@media screen and (min-width: 960px) {
+  .offers h2 {
+    max-width: 50rem;
+  }
+  .offers__wrapper {
+    display: unset;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+  .offers__item {
+    padding: 0;
+  }
+  .offers__item:hover {
+    scale: 1.1;
+    transition: 0.5s ease;
+    background: #2b2b2b;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  }
+  .offers__item:hover .offers__item__title h3 {
+    color: #ffffff;
+  }
+  .offers__item:hover p {
+    color: #ffffff;
+  }
+  .offers__item:hover a {
+    color: #ffffff;
+    background: #fb4d3d;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .offers__item__title {
+    padding: 2.5rem;
+  }
+  .offers__item__title i {
+    font-size: 5rem;
+  }
+  .offers__item p {
+    padding: 0 2.5rem;
+  }
+  .offers__item a {
+    padding: 2.5rem;
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
   }
 }/*# sourceMappingURL=main.min.css.map */
